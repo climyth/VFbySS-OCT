@@ -48,7 +48,7 @@ weight_file3 = "Weights/InceptionV4_SS_OCT.hdf5"       # inception V4
 ![](https://github.com/climyth/VFbySS-OCT/blob/master/WebImages/OCTConverter.PNG?raw=true)
 <br/><br/>
 5. set source folder and output folder
-6. press Start button. That's it!
+6. press Run button. That's it!
 
 ### How can I train model with my own OCT images?
 1. Prepare your own OCT iamges and visual field data (excel file)
