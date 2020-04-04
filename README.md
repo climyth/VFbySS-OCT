@@ -16,7 +16,7 @@
 
 ### How can I test OCT image?
 1. Download all files from github
-2. You can download weight file here (dowmload and copy it to 'Weights' folder)
+2. You can download weight file here (download and copy it to 'Weights' folder)
    <br/>(1) InceptionResnet V2: https://drive.google.com/open?id=14NsTiurh30967hkJDfbROvtz3LP-E43N
    <br/>(2) Inception V3: https://drive.google.com/open?id=143UIWLpgy7N_pwqBtmbgZgovVKtjTihr
    <br/>(3) Inception V4: https://drive.google.com/open?id=1ux-PmhrPk4xHfMhq_KEJxLzGLPX4mo8j
