@@ -57,7 +57,7 @@ weight_file3 = "Weights/InceptionV4_SS_OCT.hdf5"       # inception V4
    (4) 3rd column must contain eye list (OD or OS) <br/>
    (5) visual field total threshold values must begin at 130th column by default <br/>
    (6) There must be 54 columns of total threshold values (includes two physiologic scotoma point).<br/>
-4. If you want to set your own column number, modify setup in 'DataLoad.py'.
+4. If you want to set your own column number, modify 'DataLoad.py'.
 ```python
 # Setup ======================================
 # column number starts form 0
@@ -67,7 +67,7 @@ eye_col = 2        # eye column ('OD' or 'OS')
 thv_col = 129      # THV beginning column
 # =============================================
 ```
-5. Modify setup in 'Train.py'
+5. Modify 'Setup' in 'Train.py'
 ```python
 # Setup ====================================================================
 base_model_name = "InceptionV3"   # InceptionV3, InceptionV4, InceptionResnet
