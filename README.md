@@ -1,5 +1,5 @@
 # Visual field prediction from Topcon Swept-source OCT
-![](https://github.com/climyth/VFbySS-OCT/blob/master/WebImages/FigExamplpes.png?raw=true)
+![](https://github.com/climyth/VFbySS-OCT/blob/master/WebImages/Examplpes.jpg?raw=true)
 
 ### Features
 - Inception V3, Inception V4, InceptionResnet V2 backboned deep learning model
@@ -50,15 +50,24 @@ weight_file3 = "Weights/InceptionV4_SS_OCT.hdf5"       # inception V4
 ### How can I train model with my own OCT images?
 1. Prepare your own OCT iamges and visual field data (excel file)
 2. Generate "combined OCT" images from your train set
-3. In visual field excel file, <br/>
+3. In your visual field excel file, default column number is <br/>
    (1) your data must be in "Train" data sheet <br/>
    (2) 1st column must contain the list of image file names <br/> 
    (3) 2nd column must contain patients' id list <br/>
    (4) 3rd column must contain eye list (OD or OS) <br/>
-   (5) visual field total threshold values must begin at 130th column by default (otherwise, you need to modify "LoadData") <br/>
+   (5) visual field total threshold values must begin at 130th column by default <br/>
    (6) There must be 54 columns of total threshold values (includes two physiologic scotoma point).<br/>
-   Note: Modify setup in 'DataLoad.py' if you want to set your own column number.
-4. Modify setup in 'Train.py'
+4. If you want to set your own column number, modify setup in 'DataLoad.py'.
+```python
+# Setup ======================================
+# column number starts form 0
+filename_col = 0   # image file column
+pid_col = 1        # patients' id column.
+eye_col = 2        # eye column ('OD' or 'OS')
+thv_col = 129      # THV beginning column
+# =============================================
+```
+5. Modify setup in 'Train.py'
 ```python
 # Setup ====================================================================
 base_model_name = "InceptionV3"   # InceptionV3, InceptionV4, InceptionResnet
@@ -69,9 +78,9 @@ pretrained_weights = ""   # if no pretrained weight, just leave ""
 tensorboard_log_folder = "/Logs"
 # ==========================================================================
 ```
-5. Run the Train.py
-6. You can monitor loss trend in tensorboard. 
-7. To prevent overfitting, we used "repeated random sub-sampling cross validation method". To do this, just repeat to run Train.py. In each run, you can set "pretrained_weights" to continue the training from last weight file.
+6. Run the Train.py
+7. You can monitor loss trend in tensorboard. 
+8. To prevent overfitting, we used "repeated random sub-sampling cross validation method". To do this, just repeat to run Train.py. In each run, you can set "pretrained_weights" to continue the training from last weight file.
 
 
 ### For Research Use Only
