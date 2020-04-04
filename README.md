@@ -6,7 +6,7 @@
 - Predicts Humphrey's visual field 24-2 total threshold values from Topcon SS-OCT
 - Predicts entire picture of visual field
 - Uses combined OCT images (GCL+ thickness + RNFL thickness map);
-- Mean prediction error is 4.44 dB
+- The best mean prediction error is 4.44 dB (IncepionResnet V2)
 
 
 ### Prerequisites
