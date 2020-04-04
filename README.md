@@ -32,7 +32,7 @@ weight_file3 = "Weights/InceptionV4_SS_OCT.hdf5"       # inception V4
 # ===========================================================================================
 ```
 5. Run TestModel.py;
-6. You can see the popup window like below.
+6. You can see the popup window like below.<br/><br/>
 ![](https://github.com/climyth/VFbySS-OCT/blob/master/WebImages/TestOutput.JPG?raw=true)
 
 ### How can I make "combined OCT" image?
