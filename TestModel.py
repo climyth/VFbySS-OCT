@@ -51,7 +51,7 @@ def draw_visual_field(field_values, mplt, start_pos=(0, 0), rect_size=(35, 25)):
 
     for i in range(0, 52):
         x = start_pos[0] + rect_pos[i][0] * rect_size[0]
-        y = start_pos[1] + rect_pos[i][1] * rect_size[1]
+        y = start_pos[1] + (7 - rect_pos[i][1]) * rect_size[1]
         vf = field_values[i]
         bg_col = (vf - min_vf) / (max_vf - min_vf)   # max = 35, min = 5
         if bg_col < 0:
